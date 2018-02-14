@@ -1,0 +1,54 @@
+[
+  {
+    "featureType": "landscape.man_made",
+    "elementType": "geometry.stroke",
+    "stylers": [
+      {
+        "weight": 5
+      }
+    ]
+  },
+  {
+    "featureType": "road.highway",
+    "elementType": "geometry.fill",
+    "stylers": [
+      {
+        "color": "#80ff80"
+      },
+      {
+        "saturation": 50
+      }
+    ]
+  },
+  {
+    "featureType": "road.local",
+    "elementType": "geometry.fill",
+    "stylers": [
+      {
+        "color": "#000000"
+      },
+      {
+        "saturation": 10
+      }
+    ]
+  },
+  {
+    "featureType": "road.local",
+    "elementType": "labels.text",
+    "stylers": [
+      {
+        "color": "#ff0000"
+      },
+      {
+        "saturation": -5
+      },
+      {
+        "lightness": -5
+      },
+      {
+        "weight": 0.5
+      }
+    ]
+  }
+]
+COPY JSON
