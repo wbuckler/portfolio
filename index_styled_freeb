@@ -7,7 +7,7 @@
 		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 		<title>A Starter Page Template</title>
 		
-		<!-- If you would like to use an external CSS stylesheet for this and other pages in your site uncomment the following line and create a file called "styles.css" with your styles in the home directory of your portfolio -->
+		 <!-- From Will Buckler - The style changes I made were changing the font thickness, font style to sans serif, and the background highlight color to yellow -->
 		<!-- <link rel="stylesheet" type="text/css" href="styles.css"> -->
 		
 		<!-- you can create styles local to this page by putting them in the following style block -->
