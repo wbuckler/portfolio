@@ -14,9 +14,9 @@
     <!-- Let's put our JavaScript down here --------------------------------------------->
     <!-- Load the external JavaScript file with the map definition code -->
     <script>
-      function initialize() {
+      function initMap() {
 
-		var map = new google.maps.Map(document.getElementById(map),{
+		var mapnight = new google.maps.Map(document.getElementById('map'),{
 		
 			zoom: 15,
 			center: {lat: 33.787,lng: -106.485},
@@ -129,12 +129,14 @@
 //            myOptions);
     
 <!-- Overlay 1 -->
+		  var mapagain = new google.maps.Map(document/getElementById("map_canvas"),mapnight);
+
 		  var rangec = new google.maps.LatLng(33.787,-106.485)
           var rangecMarker = new google.maps.Marker({
             position: rangec,
             title: "Center of range"
           });
-          rangecMarker.setMap(map);
+          rangecMarker.setMap(mapagain);
 
 
 
@@ -144,10 +146,10 @@
 
 			var rangeb = new google.maps.LatLng(33.78868,-106.48303)
 			var rangebMarker = new google.maps.Marker({
-          	position:rangeb,
-            title: "Range Box. Where the OIC and NCOIC will be"    
-			});
-					rangebMarker.setMap(map);
+				position:rangeb,
+				title: "Range Box. Where the OIC and NCOIC will be"    
+				});
+			rangebMarker.setMap(mapagain);
 
 
 
@@ -165,7 +167,7 @@
           		strokeOpacity: 1.0,
           		strokeWeight: 2
         });
-         rangecPath.setMap(map)
+        rangecPath.setMap(mapagain)
 
 
 
@@ -186,7 +188,7 @@
  							fillColor: "#FF0000",
  							fillOpacity: 0.35
 							});
- 							frPoly.setMap(map)
+ 		frPoly.setMap(mapagain)
 
 
 <!-- Overlay 5 -->
@@ -195,7 +197,7 @@
 						position:ammopt,
 						title: "Ammunition will be distributed here"    
 						});
-					ammoptMarker.setMap(map);
+		ammoptMarker.setMap(mapagain);
     
       
 
@@ -203,10 +205,7 @@
 
     <!-- Load the API in asynchronous mode and execute the initialize
  function when done -->
-    <script async defer src="https://maps.googleapis.com/maps/api/js?callback=initialize&key=AIzaSyCULtN6GnMgWIvgFekC1yoDXYWfLRgjtBc">
-
-
-    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?callback=initMap&key=AIzaSyCULtN6GnMgWIvgFekC1yoDXYWfLRgjtBc"></script>
   </body>
 
 </html>
