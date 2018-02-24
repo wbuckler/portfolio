@@ -122,12 +122,12 @@
 		  ]
 		 }
 		);
-	
+	}
 		 
 //          var map = new google.maps.Map(
 //            document.getElementById("map_canvas"),
 //            myOptions);
-
+    
 <!-- Overlay 1 -->
 		  var rangec = new google.maps.LatLng(33.787,-106.485)
           var rangecMarker = new google.maps.Marker({
@@ -196,7 +196,7 @@
 						title: "Ammunition will be distributed here"    
 						});
 					ammoptMarker.setMap(map);
-    }
+    
       
 
     </script>
