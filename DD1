@@ -16,7 +16,7 @@
     <script>
       function initMap() {
 
-		var mapnight = new google.maps.Map(document.getElementById('map'),{
+		var mapnight = new google.maps.Map(document.getElementById('map_canvas'),{
 		
 			zoom: 15,
 			center: {lat: 33.787,lng: -106.485},
@@ -123,13 +123,18 @@
 		 }
 		);
 	}
-		 
-//          var map = new google.maps.Map(
-//            document.getElementById("map_canvas"),
-//            myOptions);
+
+	
+	
+
+
     
 <!-- Overlay 1 -->
-		  var mapagain = new google.maps.Map(document/getElementById("map_canvas"),mapnight);
+
+
+		  var mapagain = new google.maps.Map(
+			  document.getElementById("map_canvas"),
+			  mapnight);
 
 		  var rangec = new google.maps.LatLng(33.787,-106.485)
           var rangecMarker = new google.maps.Marker({
@@ -198,14 +203,13 @@
 						title: "Ammunition will be distributed here"    
 						});
 		ammoptMarker.setMap(mapagain);
-    
-      
-
-    </script>
+</script>
 
     <!-- Load the API in asynchronous mode and execute the initialize
  function when done -->
-    <script async defer src="https://maps.googleapis.com/maps/api/js?callback=initMap&key=AIzaSyCULtN6GnMgWIvgFekC1yoDXYWfLRgjtBc"></script>
+<script src="https://maps.googleapis.com/maps/api/js?callback=initMap&key=AIzaSyCULtN6GnMgWIvgFekC1yoDXYWfLRgjtBc"
+async defer></script>    
+	
   </body>
 
 </html>
