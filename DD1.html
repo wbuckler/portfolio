@@ -274,6 +274,25 @@
 							});
 					frPoly.setMap(mapnight);
 
+					var contentString8 = '<div id="content">'+
+						'<div id="siteNotice">'+
+						'</div>'+
+						'<h1 id="firstHeading" class="firstHeading">Space Allotted for Firing Range</h1>'+
+						'<div id="bodyContent">'+
+						'<p>Soldiers from all companies will fire in this red-colored space in order to ' +
+						'qualify on the M16.</p>'+
+						'</div>'+
+						'</div>';
+
+					var infowindow8 = new google.maps.InfoWindow({
+						content: contentString8
+						});	      
+	      
+					google.maps.event.addListener(frPoly, 'click', function() {
+						var position = new google.maps.LatLng(33.78867, -106.48007)
+						infoWindow8.setPosition(position)
+						infoWindow8.open(map);
+					});
 
 <!-- Overlay 5 Ammunition Point-->
 
