@@ -25,14 +25,14 @@
 		</style>
 	</head>
 	<body>
-		<h1>My Geography 485L/585L Home Page</h1>
+		<h1>My Geography 485L/585L Home Page</h
 		<p class="thicker">About me</p>
-		<p>Why I'm taking the course</p>
+		<p>I'm taking this course to extend what I know within my BS Geography degree.  I'm interesting in learning more about QGIS.</p>
 		
 		<h2>Topics I'm interested in</h2>
 		<ul>
-			<li>topic 1</li>
-			<li>topic 2</li>
+			<li>Snowboarding</li>
+			<li>GIS</li>
 			<li>more topics ...</li>
 		</ul>
 		
