@@ -215,18 +215,20 @@
 			var contentString7 = '<div id="content">'+
 				'<div id="siteNotice">'+
 				'</div>'+
-				'<h1 id="firstHeading" class="firstHeading">Starting Point of Route</h1>'+
+				'<h1 id="firstHeading" class="firstHeading">Route to Range Center</h1>'+
 				'<div id="bodyContent">'+
-				'<p>In order to reach the Range Center, you need to start here, and follow ' +
-				'the red-colored line.</p>'+
+				'<p>In order to reach the Range Center, you need to follow this ' +
+				'red-colored route.</p>'+
 				'</div>'+
 				'</div>';
 			var infowindow7 = new google.maps.InfoWindow({
 				content: contentString7
 				});
 	
-				routestart.addListener('click', function() {
-				infowindow7.open(mapnight, routestart);
+				rangecPath.addListener('click', function() {
+				var rtpos = new google.maps.LatLng(33.78234, -106.48194)
+				infowindow7.setPosition(rtpos)
+				infowindow7.open(mapnight);
 				});
 			
 <!-- Overlay 4 Firing Range Space-->
