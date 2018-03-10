@@ -47,7 +47,8 @@
 		<p><b href="hello-world.html">Hello World</b></p>
 		<p><a href="http://freebord.com" target="_blank">Milestone 2</a></p>
 		<p><b href="https://www.w3schools.com/css/tryit.asp?filename=trycss_font-weight">style change - font thickness</b></p>
-
+		<p><c href="https://www.google.com/maps/@33.788099,-106.4882017,15z/data=!4m2!6m1!1s1Zk1aut-fHbWmwQGa-fql9gaF0n2ezzMj?hl=en" target="_blank">Milestone 3: Google Map preview of shooting range.</c></p>
+		
 		<h2>Deep Dives</h2>
 		<p class="sansserif"><b href="">Deep Dive 1</b></p>
 	</body>
