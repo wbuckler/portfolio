@@ -1,0 +1,28 @@
+<html>
+
+<head>
+
+	
+	<!-- these two files are imported from a host that provides a hosted full build of the OpenLayers package for development as documented here: https://openlayers.org/download/ -->
+	<link rel="stylesheet" href="https://openlayers.org/en/v4.6.5/css/ol.css" type="text/css">
+    <!-- The line below is only needed for old environments like Internet Explorer and Android 4.x -->
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=requestAnimationFrame,Element.prototype.classList,URL"></script>
+    <script src="https://openlayers.org/en/v4.6.5/build/ol.js"></script>
+</head>
+
+<body>
+	<h3>Volunteer-Led Effort to Mark Awesome Spots</h3>
+
+	<div id='map1' class="map"><!-- This is where the map will be displayed --></div>
+	<form class="form-inline">
+		<label>Geometry type &nbsp;</label>
+		<select id="type">
+			<option value="Point">Point</option>
+			<option value="LineString">LineString</option>
+		</select>
+	</form>
+	<!-- import the external Javascript file with the map configuration code -->
+	<script src="OpLayPrev_SKI.js" type="text/javascript"></script>
+</body>
+
+</html>
