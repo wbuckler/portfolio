@@ -66,7 +66,7 @@ var states_single = new ol.layer.Image({
 
 ///////////////////////////////////////////////////////////////////////////////
 // create our base map objects 
-var kmlMap = new ol.Map({
+var tested = new ol.Map({
 	target: 'testing',
 	layers: [basemap_tiled,states_single], //[basemap_tiled,basemap_bern_tiled,blocks_kml,counties_kml]
 	//layers: [basemap_tiled,basemap_bern_tiled,counties_kml],
