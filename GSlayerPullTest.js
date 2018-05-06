@@ -2,7 +2,7 @@
 var projection = ol.proj.get('EPSG:3857');
 
 ///////////////////////////////////////////////////////////////////////////////
-// define some styles
+// define some styles   https://wbuckler.github.io/portfolio/
 
 var block_color = [0,255,0,.1]
 var block_line_color = [0,255,0,1]
@@ -30,7 +30,7 @@ var block_style = new ol.style.Style({
 });
 
 ///////////////////////////////////////////////////////////////////////////////
-// BASE MAP
+// BASE MAP    https://wbuckler.github.io/portfolio/
 
 
 var basemap_tiled = new ol.layer.Tile({
@@ -43,7 +43,7 @@ var basemap_tiled = new ol.layer.Tile({
 	  },
 	  attributions: [
 	    new ol.Attribution({
-		  html: 'Data provided by the <a href="http://basemap.nationalmap.gov">National Map</a>.'
+		html: 'Data provided by the <a href="http://basemap.nationalmap.gov">National Map</a>.'
 		})
 	  ]
 	})
@@ -52,23 +52,23 @@ var basemap_tiled = new ol.layer.Tile({
 
 
 
-var states_single = new ol.layer.Image({
-	source: new ol.source.ImageWMS({
+var states_single = new ol.layer.Tile({
+	source: new ol.source.TileWMS({
 		attributions: new ol.Attribution({
 			html: 'State Boundary Restructured - USGS, National Atlas Release 5-14-12'
 		}),
-		params: {'LAYERS':'global:statep010'},
-		url: 'http://mapper.internetmapping.net:8081/geoserver/global/wms?',
+		params: {'LAYERS':'kbene:statep010'},
+		url: 'http://internetmapping.net:8080/geoserver/wms?',
 		serverType: 'geoserver'
 	})
 })
 
 
 ///////////////////////////////////////////////////////////////////////////////
-// create our base map objects 
+// create our base map objects https://wbuckler.github.io/portfolio/   http://mapper.internetmapping.net:8081/geoserver/kbene/wms?    params: {'LAYERS':'kbene:statep010'},
 var tested = new ol.Map({
 	target: 'testing',
-	layers: [basemap_tiled,states_single], //[basemap_tiled,basemap_bern_tiled,blocks_kml,counties_kml]
+	layers: [basemap_tiled, states_single], //[basemap_tiled,basemap_bern_tiled,blocks_kml,counties_kml,basemap_tiled,]
 	//layers: [basemap_tiled,basemap_bern_tiled,counties_kml],
 	view: new ol.View({
 		center: ol.proj.fromLonLat([-106.6224,35.0849]), // the approximate geographic center of the continental US
