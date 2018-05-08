@@ -1,4 +1,4 @@
-///////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////
 //   The five layers presented below will help the user understand how to offer assistance to the Puerto Rican people.
 //In the aftermath of Hurricane Maria, parts of Puerto Rico have become inaccessible due to widespread damage.  By accounting for  
 //aspects of the island that would present the greatest impedance, relief can be rendered.  That's why factoring how water ways 
@@ -62,9 +62,9 @@ var basemap_tiled = new ol.layer.Tile({
 
 ///////////////////////////////////////////////////////////////////////////////   
 //  Displays natural protected areas.  Although these areas may have already suffered damaged, it would not be the US Army's interest to inflict further manmade damage.
-var states_single = new ol.layer.Image({
+var natarea = new ol.layer.Image({
 	source: new ol.source.ImageWMS({
-		url: 'http://internetmapping.net:8080/geoserver/kbene/wms?',
+		url: 'http://internetmapping.net:8080/geoserver/wms?',
 		params: {'LAYERS':'ws_WHB:CLCC_PACAT_PR_PAs_sept2015_version2'},
 	})
 });
@@ -73,12 +73,12 @@ var states_single = new ol.layer.Image({
 
 ///////////////////////////////////////////////////////////////////////////////   
 //   Displays the anticipated effect of flooding from a dam failure, which is the Lago El Guineo Dam, Orocovis, Puerto Rico, on a sunny day.
-var states_single = new ol.layer.Image({
+var damfail = new ol.layer.Image({
 	source: new ol.source.ImageWMS({
 //		attributions: new ol.Attribution({
 //			html: 'State Boundary Restructured - USGS, National Atlas Release 5-14-12'
 //		}),
-		url: 'http://internetmapping.net:8080/geoserver/kbene/wms?',
+		url: 'http://internetmapping.net:8080/geoserver/wms?',
 		params: {'LAYERS':'ws_WHB:guineo_sunny_day'},
 //		serverType: 'geoserver'
 	})
@@ -88,12 +88,12 @@ var states_single = new ol.layer.Image({
 
 ///////////////////////////////////////////////////////////////////////////////   
 //  Displays a sampling of assessment of water quality at selected wells 
-var states_single = new ol.layer.Image({
+var watersam = new ol.layer.Image({
 	source: new ol.source.ImageWMS({
 //		attributions: new ol.Attribution({
 //			html: 'State Boundary Restructured - USGS, National Atlas Release 5-14-12'
 //		}),
-		url: 'http://internetmapping.net:8080/geoserver/kbene/wms?',
+		url: 'http://internetmapping.net:8080/geoserver/wms?',
 		params: {'LAYERS':'ws_WHB:gwqw2016'},
 //		serverType: 'geoserver'
 	})
@@ -103,12 +103,12 @@ var states_single = new ol.layer.Image({
 
 ///////////////////////////////////////////////////////////////////////////////   
 //   Displays water ways within Puerto Rico
-var states_single = new ol.layer.Image({
+var waterway = new ol.layer.Image({
 	source: new ol.source.ImageWMS({
 //		attributions: new ol.Attribution({
 //			html: 'State Boundary Restructured - USGS, National Atlas Release 5-14-12'
 //		}),
-		url: 'http://internetmapping.net:8080/geoserver/kbene/wms?',
+		url: 'http://internetmapping.net:8080/geoserver/wms?',
 		params: {'LAYERS':'ws_WHB:Inland_Waterway_Lines'},
 //		serverType: 'geoserver'
 	})
@@ -118,12 +118,12 @@ var states_single = new ol.layer.Image({
 
 ///////////////////////////////////////////////////////////////////////////////   
 //Displays sections of Puerto Rico that are urban centers
-var states_single = new ol.layer.Image({
+var urbancen = new ol.layer.Image({
 	source: new ol.source.ImageWMS({
 //		attributions: new ol.Attribution({
 //			html: 'State Boundary Restructured - USGS, National Atlas Release 5-14-12'
 //		}),
-		url: 'http://internetmapping.net:8080/geoserver/kbene/wms?',
+		url: 'http://internetmapping.net:8080/geoserver/wms?',
 		params: {'LAYERS':'ws_WHB:UrbanizedArea'},
 //		serverType: 'geoserver'
 	})
@@ -134,7 +134,7 @@ var states_single = new ol.layer.Image({
 // create our base map objects https://wbuckler.github.io/portfolio/   
 var tested = new ol.Map({
 	target: 'testing',
-	layers: [basemap_tiled, states_single], 
+	layers: [basemap_tiled, natarea, damfail,watersam, waterway, urbancen], 
 	view: new ol.View({
 		center: ol.proj.fromLonLat([-66.548375,18.246950]), // the approximate geographic center of the Puerto Rico
 		zoom:9,
