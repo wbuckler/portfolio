@@ -8,7 +8,7 @@
 var projection = ol.proj.get('EPSG:3857');
 
 ///////////////////////////////////////////////////////////////////////////////
-// define some styles   https://wbuckler.github.io/portfolio/
+// define some styles   https://wbuckler.github.io/portfolio/FinalEx_Q6.html
 
 var block_color = [0,255,0,.1]
 var block_line_color = [0,255,0,1]
@@ -36,7 +36,7 @@ var block_style = new ol.style.Style({
 });
 
 ///////////////////////////////////////////////////////////////////////////////
-// BASE MAP    https://wbuckler.github.io/portfolio/
+// BASE MAP    https://wbuckler.github.io/portfolio/FinalEx_Q6.html
 
 
 var basemap_tiled = new ol.layer.Tile({
@@ -105,13 +105,13 @@ var waterway = new ol.layer.Image({
 
 
 ///////////////////////////////////////////////////////////////////////////////   
-// create our base map objects https://wbuckler.github.io/portfolio/   34.749631, -106.129672
+// create our base map objects https://wbuckler.github.io/portfolio/FinalEx_Q6.html   34.749631, -106.129672
 var tested = new ol.Map({
 	target: 'testing',
 	layers: [basemap_tiled, natarea, damfail,watersam, waterway], 
 	view: new ol.View({
-		center: ol.proj.fromLonLat([-106.59107,34.13]),
-		zoom:17,
+		center: ol.proj.fromLonLat([-106.59107,35.08]),
+		zoom:12,
 		projection: projection
 		})
 	});
