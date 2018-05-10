@@ -53,7 +53,7 @@ var basemap_tiled = new ol.layer.Tile({
 var natarea = new ol.layer.Image({
 	source: new ol.source.ImageWMS({
 		url: 'http://internetmapping.net:8080/geoserver/wms?',
-		params: {'LAYERS':'ws_WHB:35106-A5_CONT'},
+		params: {'LAYERS':'ws_WHB:35106-A5_CONT_Q6'},
 	})
 });
 
@@ -82,7 +82,7 @@ var watersam = new ol.layer.Image({
 //			html: 'State Boundary Restructured - USGS, National Atlas Release 5-14-12'
 //		}),
 		url: 'http://internetmapping.net:8080/geoserver/wms?',
-		params: {'LAYERS':'ws_WHB:35106-A6_CONT'},
+		params: {'LAYERS':'ws_WHB:35106-A6_CONT_Q6'},
 //		serverType: 'geoserver'
 	})
 });
